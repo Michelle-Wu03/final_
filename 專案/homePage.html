@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Home Page</title>
+      <style>
+          body{
+              background-image: url(back.jpg);
+          }
+          .button{
+            position: fixed;
+            bottom:10%;
+            background-color: beige;
+            font-size: 24px;
+            padding: 16px 40px;
+            border-radius: 15px;
+            box-shadow: 0 2px black;
+            outline: none;
+          }
+          .button:hover {
+              background-color: tan;
+              cursor: pointer;
+        }
+        .button:active {
+            background-color: tan;
+            box-shadow: 0 5px black;
+            transform: translateY(4px);
+        }
+        div{
+            margin:0 auto;
+            margin-top: 15%;
+            display:flex;        
+            background-color: tan;
+            align-items:center;
+            justify-content:center;
+            width:300px;
+            height:60px;
+            border:5px outset green;
+        }
+       div#title{
+            size: 100px;
+        }
+      </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+          $(function(){  
+            $("#pptButton").click(function(){
+            window.open("00857008-00857025期末專案.pptx");
+        });
+          });
+          
+      </script>
+   </head>
+
+   <body>
+    
+       <div id = "title"><p>沉澱表</p></div>
+       <form>
+        <input class = "button" id="startButton" type="button"   onclick="location.href='game.html'" value="開始合成" style="left:30%;">
+        </form>
+        <input class = "button"id="pptButton" type="button" value="說明文件" style="right:30%;">
+   </body>
+</html>

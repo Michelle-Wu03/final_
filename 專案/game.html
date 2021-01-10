@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <title>magic-pot</title>
+    <script src="project_.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $( "li img" ).draggable;
+        $(function(){   
+            $("nav").click(function(){
+                $(this).children("ul").slideToggle(500);
+            });
+        });
+        $(function(){   
+            $("#click_button").click(function(){
+                if($("#div1").html() == "" || $("#div2").html() == ""){alert("元素不可為空!");return;}
+                $("body").css({"background-color": "black", "background-image": " url(tenor.gif)", "background-repeat": "no-repeat",
+                "background-size": "700px auto", "background-position": "50% 50px","margin-top": "20%"});
+                $("body").html($("#div1").html() + $("#div2").html());
+                var an1 = $("img:first");
+                var an2 = $($("img")[1]);
+                an1.css({"position":"relative", "top":"80px", "border":"2px solid white", "background":"black"});
+                an2.css({"position":"relative", "left":"80%", "top":"80px", "border":"2px solid white", "background":"black"});
+                an1.animate({left: '48%', "height":"180px", "width":"180px"}, 1500);
+                an2.animate({left: '35%', "height":"180px", "width":"180px"}, 1500);
+                an1.hide(2000);
+                an2.hide(2000);
+                setTimeout(function(){openwin();}, 3500);
+            });
+        });
+
+    </script>
+    <style>
+    body{
+        background-image: url(pots.gif);
+        background-color: slateblue;
+        background-position: 50% 10px;
+        background-repeat: no-repeat;
+    }
+    #left_list { font-weight: bold;
+        color: white;
+        border: 2px solid darkblue;
+        text-align: center;
+        width: 10em;
+        background-color: darkblue; }
+    #right_list { 
+        position: absolute;
+        color: white;
+        left:77%;
+        font-weight: bold;
+        border: 2px solid darkblue;
+        text-align: center;
+        width: 10em;
+        background-color: darkblue; }
+    nav{ border-radius: 10px;}
+    nav ul { display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li { border: 2px solid darkblue;
+        border-radius: 10px;
+        background-color: white;
+        width: 10em;
+    }
+    nav ul li img{height: 100px;
+        width: 110px;
+    }
+    nav ul li img:hover{
+        height:150px;
+        width:150px;
+        cursor: move; 
+    }
+    #div1 {
+        position: absolute;
+        left: 42%;
+        top:28%;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+    #div2 {
+        position: absolute;
+        left: 52%;
+        top:28%;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+    img{height: 100px;
+                width: 100px;}
+    nav:hover{cursor: pointer; }
+    #click_button{
+        position: absolute;
+        left:49%;
+        top:80%;
+        padding: 4px 10px;
+        border: outset;
+        background-color:mediumorchid;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+    #click_button:hover{
+        background-color: white;
+        border:2px solid blueviolet;
+        cursor: pointer;
+    }
+    .line2{
+        position: absolute;
+        left: 12%;
+        top: 3.5%;
+    }
+    </style>
+    
+    </head>
+    <body>
+        <input id="click_button" type="button"  value="start">
+        <nav id="right_list">Items
+            <ul>
+                <li><img src = "element/br-.png"     alt = "pic_1" id = "Br-"    ondragstart="drag(event)"></li>
+                <li><img src = "element/cl-.png"     alt = "pic_1" id = "Cl-"    ondragstart="drag(event)"></li>
+                <li><img src = "element/co3_2-.png"  alt = "pic_1" id = "CO32-"  ondragstart="drag(event)"></li>
+                <li><img src = "element/cro4_2-.png" alt = "pic_1" id = "Cro42-" ondragstart="drag(event)"></li>
+                <li><img src = "element/i-.png"      alt = "pic_1" id = "I-"     ondragstart="drag(event)"></li>
+                <li><img src = "element/oh-.jpg"     alt = "pic_1" id = "OH-"    ondragstart="drag(event)"></li>
+            </ul>
+            <ul style = "position: absolute;left: 110%; top: 3.5%;">
+                <li><img src = "element/po4_3-.jpg"  alt = "pic_1" id = "PO43-"  ondragstart="drag(event)"></li>
+                <li><img src = "element/s2-.png"     alt = "pic_1" id = "S2-"    ondragstart="drag(event)"></li>
+                <li><img src = "element/so3_2-.jpg"  alt = "pic_1" id = "SO32-"  ondragstart="drag(event)"></li>
+                <li><img src = "element/so4_2-.png"  alt = "pic_1" id = "SO42-"  ondragstart="drag(event)"></li>
+            </ul>
+        </nav>
+        <nav id="left_list">Items
+            <ul>
+                <li><img src = "element_l/ag+.jpg"  alt = "pic_1" id = "Ag+"   ondragstart="drag(event)"></li>
+                <li><img src = "element_l/al3+.jpg" alt = "pic_1" id = "Al3+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/ba2+.png" alt = "pic_1" id = "Ba2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/ca2+.png" alt = "pic_1" id = "Ca2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/cu+.png"  alt = "pic_1" id = "Cu+"   ondragstart="drag(event)"></li>
+                <li><img src = "element_l/cu2+.png" alt = "pic_1" id = "Cu2+"  ondragstart="drag(event)"></li>
+            </ul>
+            <ul class = "line2">
+                <li><img src = "element_l/fe3+.png" alt = "pic_1" id = "Fe3+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/hg+.png"  alt = "pic_1" id = "Hg22+" ondragstart="drag(event)"></li>
+                <li><img src = "element_l/mg2+.png" alt = "pic_1" id = "Mg2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/ni2+.png" alt = "pic_1" id = "Ni2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/pb2+.png" alt = "pic_1" id = "Pb2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/sr2+.png" alt = "pic_1" id = "Sr2+"  ondragstart="drag(event)"></li>
+                <li><img src = "element_l/zn2+.png" alt = "pic_1" id = "Zn2+"  ondragstart="drag(event)"></li>
+            </ul>
+        </nav>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        
+    </body>
+</html>
+ 

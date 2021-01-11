@@ -52,6 +52,8 @@ function openwin()
     console.log(array)
     var num1="";
     var num2="";
+    len1=array[0].length;
+    len2=array[1].length;
     if(parseInt(array[0][len1-2]))
     {
         num1=parseInt(array[0][len1-2]);
@@ -60,6 +62,7 @@ function openwin()
     else
         var elem1=array[0].substr(0,(len1-1));
     console.log(array[0][len1-2]);
+    
     if(parseInt(array[1][len2-2]))
     {
         num2=parseInt(array[1][len2-2]);

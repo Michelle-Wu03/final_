@@ -41,8 +41,15 @@ function start(){
 
 function openwin()
 {
+    console.log(array)
     var len1=array[0].length;
     var len2=array[1].length;
+    if (array[0][len1-1] == "-"){
+        var t = array[0];
+        array[0] = array[1];
+        array[1] = t;
+    }
+    console.log(array)
     var num1="";
     var num2="";
     if(parseInt(array[0][len1-2]))

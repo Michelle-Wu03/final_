@@ -6,6 +6,9 @@
     <title>magic-pot</title>
     <script src="project_.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script>
         $( "li img" ).draggable;
         $(function(){   
@@ -29,6 +32,17 @@
                 an2.hide(2000);
                 setTimeout(function(){openwin();}, 3500);
             });
+        });
+        $(function(){
+            $.fn.animation=function(){
+                $("body").html("<img src = 'bomb.svg' style =' height: 100px; width: 100px; position:relative; left:40%; top:10px; '>");
+                var ani =  $("img");
+                ani.animate({"height":"300px", "width":"300px"}, 1500, function(){
+                    var content = $("body").html();
+                    $("body").html(content + "<img src = 'boom.svg' style =' height: 700px; width: 700px; position:fixed; left: 26.5%; top: 10px;' class = 'animate__heartBeat'>");
+                });
+                setTimeout(function(){alert("失敗!");location.reload(); }, 2000);
+            }
         });
 
     </script>
@@ -123,7 +137,7 @@
                 <li><img src = "element/br-.png"     alt = "pic_1" id = "Br-"    ondragstart="drag(event)"></li>
                 <li><img src = "element/cl-.png"     alt = "pic_1" id = "Cl-"    ondragstart="drag(event)"></li>
                 <li><img src = "element/co3_2-.png"  alt = "pic_1" id = "CO32-"  ondragstart="drag(event)"></li>
-                <li><img src = "element/cro4_2-.png" alt = "pic_1" id = "Cro42-" ondragstart="drag(event)"></li>
+                <li><img src = "element/cro4_2-.png" alt = "pic_1" id = "CrO42-" ondragstart="drag(event)"></li>
                 <li><img src = "element/i-.png"      alt = "pic_1" id = "I-"     ondragstart="drag(event)"></li>
                 <li><img src = "element/oh-.jpg"     alt = "pic_1" id = "OH-"    ondragstart="drag(event)"></li>
             </ul>
@@ -136,7 +150,7 @@
         </nav>
         <nav id="left_list">Items
             <ul>
-                <li><img src = "element_l/ag+.jpg"  alt = "pic_1" id = "Ag+"   ondragstart="drag(event)"></li>
+                <li><img src = "element_l/ag+.png"  alt = "pic_1" id = "Ag+"   ondragstart="drag(event)"></li>
                 <li><img src = "element_l/al3+.jpg" alt = "pic_1" id = "Al3+"  ondragstart="drag(event)"></li>
                 <li><img src = "element_l/ba2+.png" alt = "pic_1" id = "Ba2+"  ondragstart="drag(event)"></li>
                 <li><img src = "element_l/ca2+.png" alt = "pic_1" id = "Ca2+"  ondragstart="drag(event)"></li>

@@ -106,7 +106,7 @@ function openwin()
         OpenWindow.document.write("<TITLE>例子</TITLE>");
         OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
         OpenWindow.document.write("<h1>Hello!"+string+"</h1>");
-        OpenWindow.document.write("<h1>"+string+" color is "+obj[string][0]+"</h1>");
+        OpenWindow.document.write("<h1>"+string+" color is <em style = 'color: "+ obj[string][0]+"; -webkit-text-stroke: 2px gray;'>"+obj[string][0]+"</em></h1>");
         OpenWindow.document.write("<p><em>For more information, please click on the image ↓</em></p>");
         OpenWindow.document.write("<a href='https://zh.wikipedia.org/wiki/"+obj[string][1]+"', target = '_blank'><img src='compound/"+string+".jpg' width=300 height=300></a>");
         OpenWindow.document.write("<p>" + obj[string][2] +"</p>");
